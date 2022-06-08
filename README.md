@@ -9,14 +9,14 @@ You'll need to do a few things to get this working:
   - Again, the only values you'll need here are for Cloudinary
 
 - create a `.env` file in the `api` folder
-  - You'll need to enter values here for a JWT secret and your MongoDB setup. The app is setup to use MongoDB Atlas, so if you have one, just enter those values. But, it can easily be reconfigured to use a local mongo instance. Just go to `api > src > db > index.ts` to make the relevant changes.
+  - You'll need to enter values here for a JWT secret and your MongoDB setup. The app is setup to use MongoDB Atlas, so if you have an account there, just enter those values. But, it can easily be reconfigured to use a local mongo instance. Just go to `api > src > db > index.ts` to make the relevant changes.
   - The `APOLLO` values in the `.env` aren't critical unless you want to be able to use the web-based apollo graphql playground. The service name is up to you, but the service-key comes from apollo once you've setup at [apollo studio](https://studio.apollographql.com)
 
 - create a [Cloudinary](https://cloudinary.com/) account. The free tier is more than enough and it's really easy to get going. Once you have an account, just enter the name, key, and secret into the .env
 
 You'll need to `npm i` in both the `api` and `next` folders.
 
-You should probably seed the database since I haven't created a way to register an account yet. Security is very basic, but functional. You can always change the user info in the seed file to whatever you want.
+You should probably seed the database since I haven't created a way to register an account yet. Security is very basic, but functional. You can always change the data in the seed files to whatever you want. The command is `npm run seed`.
 
 To start the apps, each piece runs separately. The `api` start command is simply `npm start`. The `next` command is `npm run dev`.
 
