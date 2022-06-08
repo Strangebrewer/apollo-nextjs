@@ -1,0 +1,43 @@
+{
+  "name": "next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "types": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Strangebrewer/apollo-nextjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Strangebrewer/apollo-nextjs/issues"
+  },
+  "homepage": "https://github.com/Strangebrewer/apollo-nextjs#readme",
+  "dependencies": {
+    "@apollo/client": "^3.6.4",
+    "apollo-link-error": "^1.1.13",
+    "axios": "^0.27.2",
+    "cloudinary": "^1.30.0",
+    "date-fns": "^2.28.0",
+    "deepmerge": "^4.2.2",
+    "dotenv": "^16.0.1",
+    "lodash": "^4.17.21",
+    "next": "^12.1.6",
+    "next-auth": "^4.3.4",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "recoil": "^0.7.3-alpha.2",
+    "slugify": "^1.6.5",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.7"
+  }
+}

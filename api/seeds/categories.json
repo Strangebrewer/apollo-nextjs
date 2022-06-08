@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Gas",
+    "description": "Putting gas in the cars"
+  },
+  {
+    "name": "Food",
+    "description": "e.g grocery store, fast food, restaurant"
+  },
+  {
+    "name": "Entertainment",
+    "description": "e.g. rent a movie, pay for Netflix"
+  }
+]

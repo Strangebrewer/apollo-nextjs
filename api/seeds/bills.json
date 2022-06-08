@@ -1,0 +1,68 @@
+[
+  {
+    "amount": 0,
+    "description": "gas bill",
+    "dueDay": 10,
+    "name": "Dominion"
+  },
+  {
+    "amount": 4499,
+    "description": "Comcast",
+    "dueDay": 24,
+    "name": "Comcast"
+  },
+  {
+    "amount": 10377,
+    "description": "Car insurance",
+    "dueDay": 8,
+    "name": "Car Insurance"
+  },
+  {
+    "amount": 11000,
+    "description": "Cellphones",
+    "dueDay": 15,
+    "name": "Cell Phone"
+  },
+  {
+    "amount": 21565,
+    "description": "Student Loans",
+    "dueDay": 14,
+    "name": "Navient"
+  },
+  {
+    "amount": 0,
+    "description": "Super Amazing Credit Union Visa",
+    "dueDay": 28,
+    "name": "SACU Visa"
+  },
+  {
+    "amount": 0,
+    "description": "Super Amazing American Express",
+    "dueDay": 8,
+    "name": "SA AMEX"
+  },
+  {
+    "amount": 212700,
+    "description": "Rent on der homezz",
+    "dueDay": 1,
+    "name": "Rent"
+  },
+  {
+    "amount": 0,
+    "description": "Bountiful Power",
+    "dueDay": 10,
+    "name": "Bountiful Power"
+  },
+  {
+    "amount": 6000,
+    "description": "Student Loans",
+    "dueDay": 10,
+    "name": "Student Loans"
+  },
+  {
+    "amount": 0,
+    "description": "MegaMoney Credit Union Visa",
+    "dueDay": 10,
+    "name": "MMCU MC"
+  }
+]

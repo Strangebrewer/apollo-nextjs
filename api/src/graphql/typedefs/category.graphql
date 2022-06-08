@@ -1,0 +1,23 @@
+type Category implements Timestamps {
+  _id: ID!
+  name: String!
+  description: String
+  transactionTemplate: Template
+  user: User!
+
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+input CategoryCreateInput {
+  name: String!
+  description: String
+  transactionTemplate: ID
+}
+
+input CategoryUpdateInput {
+  name: String
+  description: String
+  transactionTemplate: ID
+}

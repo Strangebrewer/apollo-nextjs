@@ -1,0 +1,25 @@
+  type User implements Timestamps {
+    _id: ID!
+    username: String!
+    normalizedUsername: String!
+    email: String!
+    normalizedEmail: String!
+    password: String!
+
+    # Interface required
+    createdAt: Date!
+    updatedAt: Date!
+  }
+
+  # Inputs
+  input UserCreateInput {
+    username: String!
+    email: String!
+    password: String!
+  }
+
+  input UserUpdateInput {
+    username: String
+    email: String
+    password: String
+  }

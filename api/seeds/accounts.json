@@ -1,0 +1,30 @@
+[
+  {
+    "accountType": "asset",
+    "balance": 600000,
+    "description": "Super Amazing Credit Union checking account",
+    "name": "SACU Checking",
+    "status": "active"
+  },
+  {
+    "accountType": "asset",
+    "balance": 220000,
+    "description": "Super Amazing Credit Union savings account",
+    "name": "SACU Savings",
+    "status": "active"
+  },
+  {
+    "accountType": "debt",
+    "balance": 980000,
+    "description": "Super Amazing Credit Union Visa",
+    "name": "SACU Visa",
+    "status": "active"
+  },
+  {
+    "accountType": "debt",
+    "balance": 520000,
+    "description": "Super Amazing American Express",
+    "name": "SA AMEX",
+    "status": "active"
+  }
+]

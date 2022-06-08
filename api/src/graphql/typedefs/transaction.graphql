@@ -1,0 +1,64 @@
+type Transaction implements Timestamps {
+  _id: ID!
+  amount: Int!
+  bill: Bill
+  billDate: String
+  category: Category
+  date: Date
+  description: String
+  destination: Account
+  isIncome: Boolean
+  source: Account
+  transactionType: String!
+  user: User!
+
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+type Transactions {
+  info: Info!
+  results: [Transaction]!
+}
+
+input TransactionCreateInput {
+  amount: Int!
+  bill: ID
+  category: ID
+  description: String
+  destination: ID
+  isIncome: Boolean
+  source: ID
+  transactionType: String
+}
+
+input TransactionUpdateInput {
+  amount: Int
+  bill: ID
+  category: ID
+  description: String
+  destination: ID
+  isIncome: Boolean
+  source: ID
+  transactionType: String
+}
+
+type TransactionFromTemplate {
+  source: Account
+  destination: Account
+  transaction: Transaction!
+}
+
+input TransactionQueryParams {
+  pageSize: Int
+  page: Int
+  account: String
+  startDate: String
+  endDate: String
+  income: Boolean
+  range: String
+  bill: String
+  category: String
+  fields: String
+}

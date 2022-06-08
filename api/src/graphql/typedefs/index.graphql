@@ -1,0 +1,77 @@
+scalar Date
+
+type Query {
+  # Users
+  getCurrentUser: User
+  
+  # Accounts
+  accounts: [Account]!
+  account(id: ID!): Account
+  
+  # Bills
+  bills: [Bill]!
+  bill(id: ID!): Bill
+  
+  # Categories
+  categories: [Category]!
+  category(id: ID!): Category
+
+  # Images
+  images: [Image]!
+  image(id: ID!): Image
+
+  # Notes
+  notes(params: NoteQueryParams): Notes!
+  note(id: ID!): Note
+  
+  # Templates
+  templates: [Template]!
+  template(id: ID!): Template
+  
+  # Transactions
+  transactions(params: TransactionQueryParams): Transactions!
+  transaction(id: ID!): Transaction
+}
+
+type Mutation {
+  # Users
+  register(user: UserCreateInput): Tokenized!
+  login(email: String, password: String): Tokenized!
+
+  # Accounts
+  createAccount(account: AccountCreateInput): Account!
+  updateAccount(id: ID, account: AccountUpdateInput): Account!
+  deleteAccount(id: ID): Account
+
+  # Bills
+  createBill(bill: BillCreateInput): Bill!
+  defaultBillPay(id: ID!, year: Int!, month: Int!): Bill!
+  editedBillPay(id: ID!, amount: Int, dueDay: Int, year: Int!, month: Int!): Bill!
+  updateBill(id: ID, bill: BillUpdateInput): Bill!
+  deleteBill(id: ID!): Bill
+
+  # Categories
+  createCategory(category: CategoryCreateInput): Category!
+  updateCategory(id: ID, category: CategoryUpdateInput): Category!
+  deleteCategory(id: ID): Category
+
+  # Images
+  createImage(image: ImageCreateInput): Image!
+  deleteImage(id: ID!): Image
+
+  # Notes
+  createNote(note: NoteCreateInput): Note!
+  updateNote(id: ID, note: NoteUpdateInput): Note!
+  deleteNote(id: ID): Note
+
+  # Templates
+  createTemplate(template: TemplateCreateInput): Template!
+  updateTemplate(id: ID, template: TemplateUpdateInput): Template!
+  deleteTemplate(id: ID): Template
+
+  # Transactions
+  createTransaction(transaction: TransactionCreateInput): Transaction!
+  createFromTemplate(id: ID!): TransactionFromTemplate!
+  updateTransaction(id: ID!, transaction: TransactionUpdateInput!): Transaction!
+  deleteTransaction(id: ID!): Transaction
+}

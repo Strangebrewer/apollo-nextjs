@@ -1,0 +1,16 @@
+{
+	"exclude": ["node_modules", "./src/**/**test.ts", "./test", "./client"],
+	"compilerOptions": {
+		"sourceMap": true,
+		"outDir": "dist",
+		"strict": true,
+		"lib": ["es2017", "esnext.asynciterable"],
+		"target": "ES2016",
+		"moduleResolution": "node",
+		"types": ["reflect-metadata", "jest", "node"],
+		"esModuleInterop": true,
+		"noImplicitAny": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	}
+}

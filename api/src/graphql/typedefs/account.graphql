@@ -1,0 +1,29 @@
+type Account implements Timestamps {
+  _id: ID!
+  accountType: String!
+  balance: Int!
+  description: String
+  name: String!
+  status: String!
+  user: User!
+
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+input AccountCreateInput {
+  accountType: String
+  balance: Int
+  description: String
+  name: String
+  status: String
+}
+
+input AccountUpdateInput {
+  accountType: String
+  balance: Int
+  description: String
+  name: String
+  status: String
+}

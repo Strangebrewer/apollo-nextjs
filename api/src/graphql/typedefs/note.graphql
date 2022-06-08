@@ -1,0 +1,36 @@
+type Note implements Timestamps {
+  _id: ID!
+  title: String!
+  text: String!
+  importance: Int!
+  favorite: Boolean!
+  user: User!
+
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+type Notes {
+  info: Info!
+  result: [Note]!
+}
+
+input NoteCreateInput {
+  title: String!
+  text: String!
+  importance: Int
+  favorite: Boolean
+}
+
+input NoteUpdateInput {
+  title: String
+  text: String
+  importance: Int
+  favorite: Boolean
+}
+
+input NoteQueryParams {
+  importance: Int
+  page: Int
+  pageSize: Int
+}

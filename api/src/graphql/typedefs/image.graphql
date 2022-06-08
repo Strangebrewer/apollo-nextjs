@@ -1,0 +1,54 @@
+type Image implements Timestamps {
+  _id: ID!
+  url: String!
+  lgUrl: String
+  midUrl: String
+  smUrl: String
+  thumbnailUrl: String
+  publicId: String!
+  data: ImageData
+  user: User!
+
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+input ImageCreateInput {
+  url: String!
+  lgUrl: String
+  midUrl: String
+  smUrl: String
+  thumbnailUrl: String
+  publicId: String!
+  data: ImageDataInput
+}
+
+input ImageUpdateInput {
+  url: String
+  lgUrl: String
+  midUrl: String
+  smUrl: String
+  thumbnailUrl: String
+  publicId: String
+  data: ImageDataInput
+}
+
+type ImageData {
+  assetId: String
+  etag: String
+  originalFilename: String
+  path: String
+  secureUrl: String
+  height: Int
+  width: Int
+}
+
+input ImageDataInput {
+  assetId: String
+  etag: String
+  originalFilename: String
+  path: String
+  secureUrl: String
+  height: Int
+  width: Int
+}

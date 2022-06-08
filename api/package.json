@@ -1,0 +1,69 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && tsc && npm run copy-files",
+    "clean": "npx rimraf dist coverage",
+    "client": "cd ../client && npm run start",
+    "copy-files": "copyfiles -u 1 src/graphql/typedefs/*.graphql dist/",
+    "seed": "node seeds/index.js",
+    "start": "npm run build && nodemon dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Strangebrewer/apollo-nextjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Strangebrewer/apollo-nextjs/issues"
+  },
+  "homepage": "https://github.com/Strangebrewer/apollo-nextjs#readme",
+  "dependencies": {
+    "@types/jws": "^3.2.4",
+    "@types/reflect-metadata": "^0.1.0",
+    "apollo-datasource": "^3.3.1",
+    "apollo-datasource-rest": "^3.5.2",
+    "apollo-server": "^3.6.6",
+    "apollo-server-express": "^3.6.6",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "copyfiles": "^2.4.1",
+    "dataloader": "^2.0.0",
+    "date-fns": "^2.28.0",
+    "dotenv": "^16.0.0",
+    "esm": "^3.2.25",
+    "graphql": "^16.3.0",
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "jws": "^4.0.0",
+    "mongoose": "^6.2.8",
+    "next": "^12.1.6",
+    "next-auth": "^4.3.4",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "reflect-metadata": "^0.1.13",
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/express": "^4.17.12",
+    "@types/jest": "^26.0.24",
+    "@types/jsonwebtoken": "^8.5.2",
+    "@types/mocha": "^8.2.3",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^15.12.4",
+    "@types/passport-jwt": "^3.0.6",
+    "@types/passport-local": "^1.0.34",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "apollo": "^2.33.10",
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.6.3"
+  }
+}

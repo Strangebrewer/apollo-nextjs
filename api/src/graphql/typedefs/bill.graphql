@@ -1,0 +1,53 @@
+type Bill implements Timestamps {
+  _id: ID!
+  amount: Int!
+  category: Category
+  source: Account!
+  destination: Account
+  description: String
+  dueDay: Int!
+  name: String!
+  status: String!
+  user: User!
+
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+type BillTransactions {
+  present: Transaction
+  pastOne: Transaction
+  pastTwo: Transaction
+}
+
+extend type Bill {
+  transactions(month: Int!, year: Int!): BillTransactions
+}
+
+input BillQueryParams {
+  year: Int!
+  month: Int!
+}
+
+input BillCreateInput {
+  amount: Int!
+  category: ID
+  source: ID!
+  destination: ID
+  description: String
+  dueDay: Int!
+  name: String!
+  status: String
+}
+
+input BillUpdateInput {
+  amount: Int
+  category: ID
+  source: ID
+  destination: ID
+  description: String
+  dueDay: Int
+  name: String
+  status: String
+}
